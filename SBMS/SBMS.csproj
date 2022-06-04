@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DCB8A61-77D8-40A9-AC58-FA477E3DC2A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SBMS</RootNamespace>
+    <AssemblyName>SBMS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\CategoryManager.cs" />
+    <Compile Include="BLL\CustomerManager.cs" />
+    <Compile Include="BLL\LoginRegisterManager.cs" />
+    <Compile Include="BLL\ProdcutManager.cs" />
+    <Compile Include="BLL\PurchaseManager.cs" />
+    <Compile Include="BLL\PurchaseModuleManager.cs" />
+    <Compile Include="BLL\PurchaseReportManager.cs" />
+    <Compile Include="BLL\SaleModuleManager.cs" />
+    <Compile Include="BLL\SalesManager.cs" />
+    <Compile Include="BLL\StockModuleManager.cs" />
+    <Compile Include="BLL\SupplierManager.cs" />
+    <Compile Include="CategoryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryUI.Designer.cs">
+      <DependentUpon>CategoryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerUI.Designer.cs">
+      <DependentUpon>CustomerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\DetailSaleInfo.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\Purchase.cs" />
+    <Compile Include="Model\PurchaseDetails.cs" />
+    <Compile Include="Model\Sale.cs" />
+    <Compile Include="Model\Stock.cs" />
+    <Compile Include="Model\Register.cs" />
+    <Compile Include="Model\Sales.cs" />
+    <Compile Include="Model\Sales_Amount.cs" />
+    <Compile Include="Model\Sales_Details.cs" />
+    <Compile Include="Model\Supplier.cs" />
+    <Compile Include="Model\SupplierPurchase.cs" />
+    <Compile Include="Model\SupplierPurchaseDetails.cs" />
+    <Compile Include="Model\TemporaryLoyalityPoint.cs" />
+    <Compile Include="OrderUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderUI.Designer.cs">
+      <DependentUpon>OrderUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductUI.Designer.cs">
+      <DependentUpon>ProductUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseModuleUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseModuleUI.Designer.cs">
+      <DependentUpon>PurchaseModuleUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport.Designer.cs">
+      <DependentUpon>PurchaseReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseUI.Designer.cs">
+      <DependentUpon>PurchaseUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\CustomerRepository.cs" />
+    <Compile Include="Repository\LoginRegisterRepository.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ProductRepository.cs" />
+    <Compile Include="Repository\PurchaseModuleRepository.cs" />
+    <Compile Include="Repository\PurchaseReportRepository.cs" />
+    <Compile Include="Repository\PurchaseRepository.cs" />
+    <Compile Include="Repository\SaleModuleRepository.cs" />
+    <Compile Include="Repository\SalesRepository.cs" />
+    <Compile Include="Repository\StockModuleRepository.cs" />
+    <Compile Include="Repository\SupplierRepository.cs" />
+    <Compile Include="SalesModuleReportUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesModuleReportUI.Designer.cs">
+      <DependentUpon>SalesModuleReportUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesModuleUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesModuleUI.Designer.cs">
+      <DependentUpon>SalesModuleUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReportUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesReportUI.Designer.cs">
+      <DependentUpon>SalesReportUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesUI.Designer.cs">
+      <DependentUpon>SalesUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SBMSMDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SBMSMDIParent.Designer.cs">
+      <DependentUpon>SBMSMDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockModule.Designer.cs">
+      <DependentUpon>StockModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierUI.Designer.cs">
+      <DependentUpon>SupplierUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ProductView.cs" />
+    <Compile Include="ViewModel\PurchaseModuleView.cs" />
+    <Compile Include="ViewModel\SalesView.cs" />
+    <EmbeddedResource Include="CategoryUI.resx">
+      <DependentUpon>CategoryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUI.resx">
+      <DependentUpon>CustomerUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderUI.resx">
+      <DependentUpon>OrderUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductUI.resx">
+      <DependentUpon>ProductUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PurchaseModuleUI.resx">
+      <DependentUpon>PurchaseModuleUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseReport.resx">
+      <DependentUpon>PurchaseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseUI.resx">
+      <DependentUpon>PurchaseUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesModuleReportUI.resx">
+      <DependentUpon>SalesModuleReportUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesModuleUI.resx">
+      <DependentUpon>SalesModuleUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReportUI.resx">
+      <DependentUpon>SalesReportUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesUI.resx">
+      <DependentUpon>SalesUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SBMSMDIParent.resx">
+      <DependentUpon>SBMSMDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockModule.resx">
+      <DependentUpon>StockModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierUI.resx">
+      <DependentUpon>SupplierUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\SBMS.Model.Category.datasource" />
+    <None Include="Properties\DataSources\SBMS.Model.Customer.datasource" />
+    <None Include="Properties\DataSources\SBMS.Model.Product.datasource" />
+    <None Include="Properties\DataSources\SBMS.Model.PurchaseDetails.datasource" />
+    <None Include="Properties\DataSources\SBMS.Model.Sales.datasource" />
+    <None Include="Properties\DataSources\SBMS.Model.Sales_Details.datasource" />
+    <None Include="Properties\DataSources\SBMS.Model.Stock.datasource" />
+    <None Include="Properties\DataSources\SBMS.Model.Supplier.datasource" />
+    <None Include="Properties\DataSources\SBMS.Model.SupplierPurchaseDetails.datasource" />
+    <None Include="Properties\DataSources\SBMS.ViewModel.ProductView.datasource" />
+    <None Include="Properties\DataSources\SBMS.ViewModel.PurchaseModuleView.datasource" />
+    <None Include="Properties\DataSources\SBMS.ViewModel.PurchaseView.datasource" />
+    <None Include="Properties\DataSources\SBMS.ViewModel.SalesView.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\768px-Ic_lock_outline_48px.svg.png" />
+    <Content Include="Images\783a89388bc26eaca56b31af7230161a %281%29.jpeg" />
+    <None Include="Resources\768px-Ic_lock_outline_48px.svg1.png" />
+    <None Include="Resources\783a89388bc26eaca56b31af7230161a %281%29.jpeg" />
+    <None Include="Resources\768px-Ic_lock_outline_48px.svg.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
